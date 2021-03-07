@@ -1,37 +1,137 @@
 <!DOCTYPE html>
-<html lang="en" class="no-js">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Interactive 3D Character with Three.js | Codrops</title>
-		<meta name="description" content="Demo for the tutorial on how to add an interactive 3D character to a website." />
-		<meta name="keywords" content="3d model, three.js, tutorial, interactive, website, web development" />
-		<meta name="author" content="Codrops" />
-		<link rel="shortcut icon" href="favicon.ico">
-		<link rel="stylesheet" type="text/css" href="css/base.css" />
-		<script>document.documentElement.className="js";var supportsCssVars=function(){var e,t=document.createElement("style");return t.innerHTML="root: { --tmp-var: bold; }",document.head.appendChild(t),e=!!(window.CSS&&window.CSS.supports&&window.CSS.supports("font-weight","var(--tmp-var)")),t.parentNode.removeChild(t),e};supportsCssVars()||alert("Please view this demo in a modern browser that supports CSS Variables.");</script>
-	</head>
-	<body>
-		<div class="loading" id="js-loader">
-			<div class="loader"></div>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Wanja's Project</title>
+</head>
+
+<style>
+	body {
+  background: #ABCDEF;
+  font-family: Assistant, sans-serif;
+  display: flex;
+  min-height: 90vh;
+}
+.login {
+  color: white;
+  background: background: #136a8a;
+  background: 
+    -webkit-linear-gradient(to right, #267871, #136a8a);
+  background: 
+    linear-gradient(to right, #267871, #136a8a);
+  margin: auto;
+  box-shadow: 
+    0px 2px 10px rgba(0,0,0,0.2), 
+    0px 10px 20px rgba(0,0,0,0.3), 
+    0px 30px 60px 1px rgba(0,0,0,0.5);
+  border-radius: 8px;
+  padding: 50px;
+}
+.login .head {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.login .head .company {
+  font-size: 2.2em;
+}
+.login .msg {
+  text-align: center;
+}
+.login .form input[type=text].text {
+  border: none;
+  background: none;
+  box-shadow: 0px 2px 0px 0px white;
+  width: 100%;
+  color: white;
+  font-size: 1em;
+  outline: none;
+}
+.login .form .text::placeholder {
+  color: #D3D3D3;
+}
+.login .form input[type=password].password {
+  border: none;
+  background: none;
+  box-shadow: 0px 2px 0px 0px white;
+  width: 100%;
+  color: white;
+  font-size: 1em;
+  outline: none;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+.login .form .password::placeholder {
+  color: #D3D3D3;
+}
+.login .form .btn-login {
+  background: none;
+  text-decoration: none;
+  color: white;
+  box-shadow: 0px 0px 0px 2px white;
+  border-radius: 3px;
+  padding: 5px 2em;
+  transition: 0.5s;
+}
+.login .form .btn-login:hover {
+  background: white;
+  color: dimgray;
+  transition: 0.5s;
+}
+.login .forgot {
+  text-decoration: none;
+  color: white;
+  float: right;
+}
+footer {
+  position: absolute;
+  color: #136a8a;
+  bottom: 10px;
+  padding-left: 20px;
+}
+footer p {
+  display: inline;
+}
+footer a {
+  color: green;
+  text-decoration: none;
+}
+footer a:hover {
+  text-decoration: underline;
+}
+footer .heart {
+  color: #B22222;
+  font-size: 1.5em
+}
+</style>
+<body>
+	<section class='login' id='login'>
+		<div class='head'>
+		<h1 class='company'>Wanja's Project</h1>
 		</div>
-		<div class="wrapper">
-		    <!-- The canvas element is used to draw the 3D scene -->
-			<canvas id="c"></canvas>
+		<p class='msg'>Welcome back</p>
+		<div class='form'>
+		  <form>
+		<input type="text" placeholder='Username' class='text' id='username' required><br>
+		<input type="password" placeholder='••••••••••••••' class='password'><br>
+		<a href="#" class='btn-login' id='do-login'>Login</a>
+		<a href="#" class='forgot'>Forgot?</a>
+		  </form>
 		</div>
-		<div class="frame">
-			<h1 class="frame__title">Wanja's Project Demo</h1>
-			<div class="frame__links">
-				<a href="http://tympanus.net/Tutorials/Blurry/">Dev Ngecu</a>
-				
-			</div>
-		</div>
-		<span class="action">Click me!</span>
-		<!-- The main Three.js file -->
-		<script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/108/three.min.js'></script>
-		<!-- This brings in the ability to load custom 3D objects in the .gltf file format. Blender allows the ability to export to this format out the box -->
-		<script src='https://cdn.jsdelivr.net/gh/mrdoob/Three.js@r92/examples/js/loaders/GLTFLoader.js'></script>
-		<!-- partial -->
-		<script  src="js/script.js"></script>
-	</body>
+	  </section>
+
+	  
+	
+	  <script>
+		  var btnLogin = document.getElementById('do-login');
+var idLogin = document.getElementById('login');
+var username = document.getElementById('username');
+btnLogin.onclick = function(){
+  idLogin.innerHTML = '<p>We\'re happy to see you again, </p><h1>' +username.value+ '</h1> <a href="ndani.html">Proceed </a>';
+}
+
+
+	  </script>
+</body>
 </html>
