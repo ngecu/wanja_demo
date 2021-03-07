@@ -149,7 +149,7 @@
     scene.add(floor);
 
     let geometry = new THREE.SphereGeometry(8, 32, 32);
-    let material = new THREE.MeshBasicMaterial({ color: 0x9bffaf }); // 0xf2ce2e 
+    let material = new THREE.MeshBasicMaterial({ color: 0xabcdef }); // 0xf2ce2e 
     let sphere = new THREE.Mesh(geometry, material);
 
     sphere.position.z = -15;
